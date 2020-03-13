@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script  type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script> 
-    <script src="js/actuador.js"></script>
+    <script src="js/actuador1.js"></script>
    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,31 +23,32 @@
     height: 100%;
     z-index: 9999;
     background: url('img/Loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    
     opacity: .8;
 }
-#nota{
-  color: red;
-}
 </style>
-<body class="#e8f5e9 green lighten-5" id="body">
+<body >
   
-  <div class="row">
+  
 
 
-    <div class="col6  #43a047 green darken-1 container center-align z-depth-3" id="forma"> <!-- Note that "m8 l9" was added -->
-     <center> <img id="imagen" class="materialboxed s3" width="200" src="img/logo.png"></center>
-    </div>
+   
     
-    <form class="col6  s12 container" accept-charset="utf-8" method="POST" id="cargar" enctype="multipart/form-data">
+    <form accept-charset="utf-8" method="POST" id="cargar" enctype="multipart/form-data">
       
-      <ul class="collection z-depth-3"> 
-        <li class="collection-item">
+      <ul class="collection"> 
+        <div class="row">
+          <i id="iconoheader" class="material-icons prefix">assignment_ind</i><h4>  NUEVO REGISTRO</h4>
+          <hr>
+         
+    </div>
+    <li  class="collection-item">
           <div class="row">
-        
+            
             <i id="iconoheader" class="material-icons prefix">supervisor_account</i><h4>  DATOS DEL ENCARGADO</h4>
       </div>
         </li>
-      <li class="collection-item">
+      <li  class="collection-item">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">title</i>
@@ -68,11 +69,12 @@
           <label for="first_name">Telefono*</label>
         </div>
        
-     
+        
 
       </div>
 
     </li>
+
     <li class="collection-item">
       <div class="row">
     <i id="iconoheader" class="material-icons prefix">people_outline</i>
@@ -107,14 +109,15 @@
             </select>
             <label>Atencion Especial</label>
           </div>
-        
+
       </div>
       <div class="row" style="display: none;" id="divatencion">
         <div class="input-field col s12">
           
-          <input placeholder="Describa la atencion especial" value="Ninguna" id="descripcion_atencion" type="text" class="validate" name="desatencion">
+          <input placeholder="Describa la atencion especial" id="descripcion_atencion" type="text" class="validate" name="desatencion" value="Ninguna">
           <label for="first_name">Atencion Especial</label>
         </div>
+      
         
 
       </div>
@@ -129,10 +132,7 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">add_a_photo</i>
-            
             <input type="file" name="imagen" class='na'/>
-            
-            
             
           </div>
            
@@ -148,7 +148,7 @@
   </center>
     </form>
   <div id="mensaje"></div>
-  </div>
-<label for="copyright" id="cp">©2020 Ebenekids Guatemala, All rights reserved.</label>
+  
+
 </body>
 </html>
